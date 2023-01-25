@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "lend",
+    "description": "Lend a helping hand on social media. Redirect users dealing with mental health issues and suicidal ideation on social media to help.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_title": "fwd:",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }
+}
